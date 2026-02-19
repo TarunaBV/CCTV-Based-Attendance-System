@@ -33,6 +33,7 @@ pip install -r requirements.txt
   );
 
   **Table 3 : attendance**
+  
   CREATE TABLE attendance (
     id INT AUTO_INCREMENT PRIMARY KEY,
     emp_id VARCHAR(10),
@@ -41,7 +42,6 @@ pip install -r requirements.txt
     out1 TIME,
     in2 TIME,
     out2 TIME,
-    
     CONSTRAINT attendance_ibfk_1
     FOREIGN KEY (emp_id)
     REFERENCES employees(emp_id)
