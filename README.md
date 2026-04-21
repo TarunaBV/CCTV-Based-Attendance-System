@@ -1,29 +1,35 @@
 # CCTV-Based-Attendance-System
 
 # --> Clone Repository
+```
 git clone https://github.com/yourusername/face-attendance.git
 cd face-attendance
-
+```
 # --> Install Dependencies
+```
 pip install -r requirements.txt
-
+```
 # --> Create the Database and tables
 
   **Database : face_db**
+  ```
   CREATE DATABASE face_db;
-
+```
   **Use the table face_db :**
+  ```
   USE face_db;
-
+```
   **Table 1 : admins**
+  ```
   CREATE TABLE admins (
     admin_id VARCHAR(50) PRIMARY KEY,
     name VARCHAR(100),
     password_hash VARCHAR(255),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
   );
-
+```
   **Table 2 : employees**
+  ```
   CREATE TABLE employees (
     id VARCHAR(10) PRIMARY KEY,
     name VARCHAR(100),
@@ -31,9 +37,9 @@ pip install -r requirements.txt
     password_hash VARCHAR(255),
     contact_number VARCHAR(15)
   );
-
+```
   **Table 3 : attendance**
-  
+  ```
   CREATE TABLE attendance (
     id INT AUTO_INCREMENT PRIMARY KEY,
     emp_id VARCHAR(10),
@@ -48,7 +54,7 @@ pip install -r requirements.txt
     ON DELETE CASCADE
     ON UPDATE CASCADE
   );
-
+```
 # --> Change database password
 Give the password of your database in 
   "password": "xyz" in app.py AND
