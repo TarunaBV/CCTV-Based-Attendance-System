@@ -1,15 +1,15 @@
 # CCTV-Based-Attendance-System
 
-# --> Clone Repository
+# Clone Repository
 ```
 git clone https://github.com/yourusername/face-attendance.git
 cd face-attendance
 ```
-# --> Install Dependencies
+# Install Dependencies
 ```
 pip install -r requirements.txt
 ```
-# --> Create the Database and tables
+# Create the Database and tables
 
   **Database : face_db**
   ```
@@ -55,19 +55,19 @@ pip install -r requirements.txt
     ON UPDATE CASCADE
   );
 ```
-# --> Change database password
+# Change database password
 Give the password of your database in 
   "password": "xyz" in app.py AND
   MYSQL_PASSWORD = "xyz" in recognize.py
 
-# --> Change the rtsp link
+# Change the rtsp link
 Give the rtsp link of your camera in **cv2.VideoCapture("rtsp://10.76.127.5:5000/")** in both the files.
 If you want to use the webcam, simply use 0. **cv2.VideoCapture(0)**
 
-# --> Setup Twilio
+# Setup Twilio
 Use twilio api for the real time whatsapp messages. Use your SID and TOKEN.
 
-# --> Run the application
+# Run the application
 python app.py
   Register an employee
 python recognize.py
